@@ -1,6 +1,10 @@
 require 'pry'
 
 class Person
+  attr_reader :given_name
+  attr_writer :catchphrase # lets us redefine catchphrase
+  attr_accessor :favorite_food
+
   def initialize(name, surname, fav_food, catchphrase)
     @given_name = name
     @surname = surname
@@ -10,6 +14,7 @@ class Person
 
   # getters
 
+  # the above attr_reader makes this function irrelevant
   def given_name
     @given_name
   end
